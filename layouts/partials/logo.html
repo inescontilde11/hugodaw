@@ -1,0 +1,69 @@
+          <style>
+            #logo svg,
+            #logo svg * {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+              fill: #282828 !important;
+              fill: var(--MENU-SECTIONS-BG-color) !important;
+              opacity: .945;
+            }
+            a#logo {
+              display: flex;
+              justify-content: center;
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);             
+              margin-bottom: 1.8125rem;
+              max-width: 60%;
+              text-transform: uppercase;
+              font-weight: 400;
+              width: 6.525rem;
+              margin-left: 1.95rem;
+              white-space: nowrap;             
+            }
+            span {
+              font-family: 'Work Sans', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+              font-size: 1.275rem;
+              font-weight: 300;
+              padding-top: 2rem;
+              padding-left: 0.5rem;
+            }
+            a#logo:hover {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+            }
+            #logo svg {
+              margin-bottom: -1.25rem;
+              margin-inline-start: -1.47rem;
+              width: 20.5%;
+            }
+            @media only all and (max-width: 60rem) {
+              a#logo {
+                font-size: 1.0625rem;
+                margin-top: -.1875rem;
+                vertical-align: middle;
+              }
+              #logo svg {
+                margin-bottom: -.75rem;
+                margin-inline-start: -1.47rem;
+              }
+            }
+            @media all and (-ms-high-contrast:none) {
+              {{ "/* IE11s understanding of positioning is weird at best */" | safeCSS }}
+              a#logo {
+                margin-top: -3.625rem;
+              }
+              #logo svg {
+                margin-bottom: -3.875rem;
+                margin-left: -1.47rem;
+              }
+            }
+            @media only all and (-ms-high-contrast:none) and (max-width: 60rem) {
+              #logo svg {
+                margin-left: -1.47rem;
+              }
+            }
+          </style>
+          <a id="logo" href="{{ partial "relLangPrettyUglyURL.hugo" (dict "to" .Site.Home) }}">
+            <img src="/images/girasol.png">
+            <span>Aprende</span> 
+          </a>

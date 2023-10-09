@@ -1,0 +1,5 @@
+{{ $color := .Get "color" | default "green" }}
+<span style=" font-weight:bold; color: {{$color}}">
+<h1>No sé que valor tiene $color</h1>
+{{.Inner }}
+</span>
